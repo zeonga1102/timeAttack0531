@@ -5,8 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-    {% for c in category %}
-        <a href="/{{ c.name }}/">{{ c.name }}</a>
+    {% for name, count in info.items %}
+        <a href="/{{ name }}/">{{ name }}({{ count }})</a>
     {% endfor %}
     <a href="/new/">글쓰기</a>
 </body>
