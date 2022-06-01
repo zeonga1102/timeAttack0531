@@ -16,7 +16,8 @@ def newView(request):
         article = Article.objects.create(title=title, content=content, category=category)
         article.save()
 
-        return redirect(f'/detail/{article.id}')
+        #return redirect(f'/detail/{article.id}')
+        return redirect('detail', article.id)
 
 
 def categoryView(request):
